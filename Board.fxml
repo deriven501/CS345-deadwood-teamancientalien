@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoardController">
+   <children>
+      <GridPane gridLinesVisible="true" layoutX="979.0" layoutY="-6.0" prefHeight="813.0" prefWidth="308.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="402.0" minHeight="10.0" prefHeight="375.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="572.0" minHeight="10.0" prefHeight="438.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Scoreboard" translateX="67.0" translateY="-155.0">
+               <font>
+                  <Font name="Book Antiqua Bold" size="32.0" />
+               </font>
+            </Label>
+            <Button fx:id="actButton" alignment="CENTER" mnemonicParsing="false" onAction="#playerAct" prefHeight="51.0" prefWidth="109.0" text="Act" translateX="165.0" translateY="30.0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua" size="19.0" />
+               </font>
+            </Button>
+            <Button id="moveButton" fx:id="moveButton" alignment="CENTER" layoutX="10.0" layoutY="582.0" mnemonicParsing="false" onAction="#playerMove" prefHeight="51.0" prefWidth="109.0" text="Move" translateX="21.0" translateY="30.0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="pickRoleButton" alignment="CENTER" layoutX="10.0" layoutY="582.0" mnemonicParsing="false" onAction="#playerPickRole" prefHeight="51.0" prefWidth="109.0" text="Pick Role" translateX="21.0" translateY="100.0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="upgradeButton" alignment="CENTER" layoutX="10.0" layoutY="582.0" mnemonicParsing="false" onAction="#playerUpgrade" prefHeight="51.0" prefWidth="109.0" text="Upgrade" translateX="165.0" translateY="176.0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua" size="19.0" />
+               </font>
+             </Button>
+             <Button fx:id="rehearseButton" alignment="CENTER" layoutX="10.0" layoutY="582.0" mnemonicParsing="false" onAction="#playerRehearse" prefHeight="51.0" prefWidth="109.0" text="Rehearse" translateX="165.0" translateY="100.0" GridPane.rowIndex="1">
+                <font>
+                   <Font name="Book Antiqua" size="19.0" />
+                </font>
+             </Button>
+            <Button id="End Turn" fx:id="endTurnButton" alignment="CENTER" layoutX="10.0" layoutY="582.0" mnemonicParsing="false" onAction="#playerTurnEnd" prefHeight="51.0" prefWidth="109.0" text="End Turn" translateX="21.0" translateY="176.0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua" size="19.0" />
+               </font>
+            </Button>
+            <Label id="currentPlayer" fx:id="currentPlayerLabel" alignment="CENTER" prefHeight="46.0" prefWidth="155.0" translateX="70.0" translateY="-194.0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label id="player8Label" fx:id="player8Label" layoutX="10.0" layoutY="191.0" translateX="20.0" translateY="81.0" />
+            <Label id="player7Label" fx:id="player7Label" translateX="20.0" translateY="56.0" />
+            <Label id="player6Label" fx:id="player6Label" layoutX="10.0" layoutY="191.0" translateX="20.0" translateY="32.0" />
+            <Label id="player5Label" fx:id="player5Label" layoutX="10.0" layoutY="191.0" translateX="20.0" translateY="5.0" />
+            <Label id="player4Label" fx:id="player4Label" layoutX="10.0" layoutY="191.0" translateX="20.0" translateY="-22.0" />
+            <Label id="player3Label" fx:id="player3Label" layoutX="10.0" layoutY="191.0" translateX="20.0" translateY="-47.0" />
+            <Label id="player2Label" fx:id="player2Label" layoutX="10.0" layoutY="191.0" translateX="20.0" translateY="-74.0" />
+            <Label id="player1Label" fx:id="player1Label" layoutX="10.0" layoutY="191.0" translateX="20.0" translateY="-104.0" />
+            <Text id="Rank" strokeType="OUTSIDE" strokeWidth="0.0" text="Rank:" translateX="20.0" translateY="-81.0" wrappingWidth="62.32080078125" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text id="Money" layoutX="10.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Money:" translateX="20.0" translateY="-52.0" wrappingWidth="79.68603515625" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text id="Credits" layoutX="10.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits:" translateX="20.0" translateY="-22.0" wrappingWidth="85.68603515625" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="21.0" />
+               </font>
+            </Text>
+            <Label fx:id="name1Label" layoutX="10.0" layoutY="187.0" translateX="100.0" translateY="-104.0" />
+            <Label fx:id="name2Label" layoutX="10.0" layoutY="187.0" translateX="100.0" translateY="-74.0" />
+            <Label fx:id="name3Label" layoutX="10.0" layoutY="187.0" translateX="100.0" translateY="-47.0" />
+            <Label fx:id="name4Label" layoutX="10.0" layoutY="187.0" translateX="100.0" translateY="-22.0" />
+            <Label fx:id="name5Label" layoutX="10.0" layoutY="187.0" translateX="100.0" translateY="5.0" />
+            <Label fx:id="name6Label" layoutX="10.0" layoutY="187.0" translateX="100.0" translateY="32.0" />
+            <Label fx:id="name7Label" layoutX="10.0" layoutY="187.0" translateX="100.0" translateY="56.0" />
+            <Label fx:id="name8Label" layoutX="10.0" layoutY="187.0" translateX="100.0" translateY="81.0" />
+            <Text id="rankDisplay" fx:id="rankDisplay" layoutX="10.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="100.0" translateY="-81.0" wrappingWidth="41.373291015625" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text id="moneyDisplay" fx:id="moneyDisplay" layoutX="10.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="100.0" translateY="-52.0" wrappingWidth="85.68603515625" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text id="creditDisplay" fx:id="creditDisplay" layoutX="10.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="100.0" translateY="-21.0" wrappingWidth="85.68603515625" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text id="rankDisplay" fx:id="tokenDisplay" strokeType="OUTSIDE" strokeWidth="0.0" translateX="243.0" translateY="-81.0" wrappingWidth="41.373291015625" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text id="Rank" strokeType="OUTSIDE" strokeWidth="0.0" text="Tokens:" translateX="160.0" translateY="-81.0" wrappingWidth="83.8057861328125" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="21.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="currentPlayerIcon" fitHeight="71.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" translateX="110.0" translateY="-135.0" GridPane.rowIndex="1" />
+            <Text id="Rank" strokeType="OUTSIDE" strokeWidth="0.0" text="Days:" translateX="160.0" translateY="-52.0" wrappingWidth="64.41455078125" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text id="rankDisplay" fx:id="dayDisplay" strokeType="OUTSIDE" strokeWidth="0.0" translateX="243.0" translateY="-52.0" wrappingWidth="41.373291015625" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <ImageView id="Board" fitHeight="813.0" fitWidth="984.0" layoutX="-5.0" layoutY="-6.0" pickOnBounds="true">
+         <image>
+            <Image url="@deadwoodBoard.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mainStreetCard" fitHeight="106.0" fitWidth="169.0" layoutX="790.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="saloonCard" fitHeight="106.0" fitWidth="169.0" layoutX="516.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hotelCard" fitHeight="106.0" fitWidth="169.0" layoutX="790.0" layoutY="659.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="bankCard" fitHeight="106.0" fitWidth="169.0" layoutX="508.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="churchCard" fitHeight="106.0" fitWidth="169.0" layoutX="507.0" layoutY="654.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="secretHideoutCard" fitHeight="106.0" fitWidth="169.0" layoutX="22.0" layoutY="653.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="ranchCard" fitHeight="106.0" fitWidth="169.0" layoutX="207.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="generalStoreCard" fitHeight="106.0" fitWidth="169.0" layoutX="299.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="jailCard" fitHeight="106.0" fitWidth="169.0" layoutX="232.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="trainStationCard" fitHeight="106.0" fitWidth="169.0" layoutX="15.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="Player 1" fx:id="player1Icon" fitHeight="51.0" fitWidth="66.0" layoutX="802.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="Player 2" fx:id="player2Icon" fitHeight="51.0" fitWidth="66.0" layoutX="853.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="Player 3" fx:id="player3Icon" fitHeight="51.0" fitWidth="66.0" layoutX="904.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="Player 4" fx:id="player4Icon" fitHeight="51.0" fitWidth="66.0" layoutX="807.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="Player 5" fx:id="player5Icon" fitHeight="51.0" fitWidth="66.0" layoutX="863.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="Player 6" fx:id="player6Icon" fitHeight="51.0" fitWidth="66.0" layoutX="916.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="Player 7" fx:id="player7Icon" fitHeight="51.0" fitWidth="66.0" layoutX="812.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="Player 8" fx:id="player8Icon" fitHeight="51.0" fitWidth="66.0" layoutX="859.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="t_Up" fx:id="tUp" fitHeight="70.0" fitWidth="53.0" layoutX="887.0" layoutY="183.0" onMouseClicked="#trailerMoveUp" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="t_Down" fx:id="tDown" fitHeight="70.0" fitWidth="53.0" layoutX="878.0" layoutY="374.0" onMouseClicked="#trailerMoveDown" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="t_Left" fx:id="tLeft" fitHeight="70.0" fitWidth="53.0" layoutX="776.0" layoutY="286.0" onMouseClicked="#trailerMoveLeft" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="msDown" fx:id="msDown" fitHeight="70.0" fitWidth="53.0" layoutX="852.0" layoutY="183.0" onMouseClicked="#mainStreetMoveDown" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="msDown2" fx:id="msDown2" fitHeight="70.0" fitWidth="53.0" layoutX="545.0" layoutY="146.0" onMouseClicked="#mainStreetMoveDown2" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="msLeft" fx:id="msLeft" fitHeight="70.0" fitWidth="53.0" layoutX="461.0" layoutY="55.0" onMouseClicked="#mainStreetMoveLeft" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="saLeft" fx:id="saLeft" fitHeight="70.0" fitWidth="53.0" layoutX="461.0" layoutY="286.0" onMouseClicked="#SaloonMoveLeft" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="saUp" fx:id="saUp" fitHeight="70.0" fitWidth="53.0" layoutX="587.0" layoutY="146.0" onMouseClicked="#SaloonMoveUp" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="saDown" fx:id="saDown" fitHeight="70.0" fitWidth="53.0" layoutX="640.0" layoutY="374.0" onMouseClicked="#SaloonMoveDown" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="saRight" fx:id="saRight" fitHeight="53.0" fitWidth="53.0" layoutX="776.0" layoutY="286.0" onMouseClicked="#SaloonMoveRight" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="jDown" fx:id="jDown" fitHeight="70.0" fitWidth="53.0" layoutX="369.0" layoutY="192.0" onMouseClicked="#jailMoveDown" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="jLeft" fx:id="jLeft" fitHeight="70.0" fitWidth="53.0" layoutX="176.0" layoutY="47.0" onMouseClicked="#jailMoveLeft" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="jRight" fx:id="jRight" fitHeight="53.0" fitWidth="53.0" layoutX="461.0" layoutY="47.0" onMouseClicked="#jailMoveRight" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="gsUp" fx:id="gsUp" fitHeight="70.0" fitWidth="53.0" layoutX="316.0" layoutY="192.0" onMouseClicked="#generalstoreMoveUp" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="gsDown" fx:id="gsDown" fitHeight="70.0" fitWidth="53.0" layoutX="203.0" layoutY="374.0" onMouseClicked="#generalstoreMoveDown" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="gsLeft" fx:id="gsLeft" fitHeight="70.0" fitWidth="53.0" layoutX="132.0" layoutY="335.0" onMouseClicked="#generalstoreMoveLeft" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="gsRight" fx:id="gsRight" fitHeight="53.0" fitWidth="53.0" layoutX="461.0" layoutY="253.0" onMouseClicked="#generalstoreMoveRight" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="tsRight" fx:id="tsRight" fitHeight="53.0" fitWidth="53.0" layoutX="177.0" layoutY="99.0" onMouseClicked="#trainStationMoveRight" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="tsRight2" fx:id="tsRight2" fitHeight="53.0" fitWidth="53.0" layoutX="132.0" layoutY="286.0" onMouseClicked="#trainStationMoveRight2" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="tsDown" fx:id="tsDown" fitHeight="70.0" fitWidth="53.0" layoutX="79.0" layoutY="374.0" onMouseClicked="#trainStationMoveDown" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="coUp" fx:id="coUp" fitHeight="70.0" fitWidth="53.0" layoutX="26.0" layoutY="374.0" onMouseClicked="#castingofficeMoveUp" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="coRight" fx:id="coRight" fitHeight="53.0" fitWidth="53.0" layoutX="159.0" layoutY="460.0" onMouseClicked="#castingofficeMoveRight" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="coDown" fx:id="coDown" fitHeight="70.0" fitWidth="53.0" layoutX="65.0" layoutY="575.0" onMouseClicked="#castingofficeMoveDown" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="rUp" fx:id="rUp" fitHeight="70.0" fitWidth="53.0" layoutX="316.0" layoutY="372.0" onMouseClicked="#ranchMoveUp" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="rDown" fx:id="rDown" fitHeight="70.0" fitWidth="53.0" layoutX="408.0" layoutY="591.0" onMouseClicked="#ranchMoveDown" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="rLeft" fx:id="rLeft" fitHeight="70.0" fitWidth="53.0" layoutX="159.0" layoutY="513.0" onMouseClicked="#ranchMoveLeft" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="rRight" fx:id="rRight" fitHeight="53.0" fitWidth="53.0" layoutX="461.0" layoutY="460.0" onMouseClicked="#ranchMoveRight" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="shUp" fx:id="shUp" fitHeight="70.0" fitWidth="53.0" layoutX="355.0" layoutY="591.0" onMouseClicked="#secrethideoutMoveUp" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="shUp2" fx:id="shUp2" fitHeight="70.0" fitWidth="53.0" layoutX="14.0" layoutY="575.0" onMouseClicked="#secrethideoutMoveUp2" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="shRight" fx:id="shRight" fitHeight="53.0" fitWidth="53.0" layoutX="461.0" layoutY="663.0" onMouseClicked="#secrethideoutMoveRight" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="bUp" fx:id="bUp" fitHeight="70.0" fitWidth="53.0" layoutX="561.0" layoutY="374.0" onMouseClicked="#bankMoveUp" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="bDown" fx:id="bDown" fitHeight="70.0" fitWidth="53.0" layoutX="598.0" layoutY="556.0" onMouseClicked="#bankMoveDown" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="bLeft" fx:id="bLeft" fitHeight="70.0" fitWidth="53.0" layoutX="461.0" layoutY="513.0" onMouseClicked="#bankMoveLeft" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="bRight" fx:id="bRight" fitHeight="53.0" fitWidth="53.0" layoutX="786.0" layoutY="434.0" onMouseClicked="#bankMoveRight" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="cUp" fx:id="cUp" fitHeight="70.0" fitWidth="53.0" layoutX="545.0" layoutY="556.0" onMouseClicked="#churchMoveUp" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="cLeft" fx:id="cLeft" fitHeight="70.0" fitWidth="53.0" layoutX="461.0" layoutY="716.0" onMouseClicked="#churchMoveLeft" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="cRight" fx:id="cRight" fitHeight="53.0" fitWidth="53.0" layoutX="733.0" layoutY="654.0" onMouseClicked="#churchMoveRight" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="hUp" fx:id="hUp" fitHeight="70.0" fitWidth="53.0" layoutX="879.0" layoutY="374.0" onMouseClicked="#hotelMoveUp" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="hLeft" fx:id="hLeft" fitHeight="70.0" fitWidth="53.0" layoutX="786.0" layoutY="486.0" onMouseClicked="#hotelMoveLeft" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="hLeft2" fx:id="hLeft2" fitHeight="70.0" fitWidth="53.0" layoutX="733.0" layoutY="707.0" onMouseClicked="#hotelMoveLeft2" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="msToken1" fitHeight="41.0" fitWidth="37.0" layoutX="657.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="msToken2" fitHeight="41.0" fitWidth="37.0" layoutX="700.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="msToken3" fitHeight="41.0" fitWidth="37.0" layoutX="743.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="sToken2" fitHeight="41.0" fitWidth="37.0" layoutX="510.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="sToken1" fitHeight="41.0" fitWidth="37.0" layoutX="555.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="bToken" fitHeight="41.0" fitWidth="37.0" layoutX="686.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cToken2" fitHeight="41.0" fitWidth="37.0" layoutX="510.0" layoutY="603.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cToken1" fitHeight="41.0" fitWidth="37.0" layoutX="557.0" layoutY="602.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hToken3" fitHeight="41.0" fitWidth="37.0" layoutX="820.0" layoutY="608.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hToken2" fitHeight="41.0" fitWidth="37.0" layoutX="864.0" layoutY="609.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hToken1" fitHeight="41.0" fitWidth="37.0" layoutX="906.0" layoutY="609.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="shToken3" fitHeight="41.0" fitWidth="37.0" layoutX="202.0" layoutY="682.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="rToken2" fitHeight="41.0" fitWidth="37.0" layoutX="387.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="shToken1" fitHeight="41.0" fitWidth="37.0" layoutX="290.0" layoutY="684.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="rToken1" fitHeight="41.0" fitWidth="37.0" layoutX="431.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="gsToken2" fitHeight="41.0" fitWidth="37.0" layoutX="258.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="gsToken1" fitHeight="41.0" fitWidth="37.0" layoutX="257.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="tsToken1" fitHeight="41.0" fitWidth="37.0" layoutX="117.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="tsToken2" fitHeight="41.0" fitWidth="37.0" layoutX="75.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="tsToken3" fitHeight="41.0" fitWidth="37.0" layoutX="31.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="jToken" fitHeight="41.0" fitWidth="37.0" layoutX="362.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="shToken2" fitHeight="41.0" fitWidth="37.0" layoutX="247.0" layoutY="683.0" pickOnBounds="true" preserveRatio="true" />
+      <GridPane fx:id="pickRoleTable" alignment="CENTER" disable="true" layoutX="387.0" layoutY="325.0" prefHeight="364.0" prefWidth="343.0" visible="false">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label disable="true" text="Available Roles" textAlignment="CENTER">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Button fx:id="roleOne" mnemonicParsing="false" onAction="#pickRoleOne" text="Role 1" GridPane.rowIndex="1" />
+            <Button fx:id="roleTwo" mnemonicParsing="false" onAction="#pickRoleTwo" text="Role 2" GridPane.rowIndex="2" />
+            <Button fx:id="roleThree" mnemonicParsing="false" onAction="#pickRoleThree" text="Role 3" GridPane.rowIndex="3" />
+            <Button fx:id="roleFour" mnemonicParsing="false" onAction="#pickRoleFour" text="No Role 4" GridPane.rowIndex="4" />
+            <Button fx:id="roleFive" mnemonicParsing="false" onAction="#pickRoleFive" text="No Role 5" GridPane.rowIndex="5" />
+            <Button fx:id="roleSix" mnemonicParsing="false" onAction="#pickRoleSix" text="No Role 6" GridPane.rowIndex="6" />
+            <Button fx:id="roleSeven" mnemonicParsing="false" onAction="#pickRoleSeven" text="No Role 7" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="upgradeTable" alignment="CENTER" disable="true" layoutX="397.0" layoutY="335.0" prefHeight="364.0" prefWidth="343.0" visible="false">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label disable="true" text="Upgrades" textAlignment="CENTER">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Button fx:id="upgradeTwoButton" mnemonicParsing="false" onAction="#upgradeRankTwo" text="Rank 2" GridPane.rowIndex="1" />
+            <Button fx:id="upgradeThreeButton" mnemonicParsing="false" onAction="#upgradeRankThree" text="Role 3" GridPane.rowIndex="2" />
+            <Button fx:id="upgradeFourButton" mnemonicParsing="false" onAction="#upgradeRankFour" text="Rank 4" GridPane.rowIndex="3" />
+            <Button fx:id="upgradeFiveButton" mnemonicParsing="false" onAction="#upgradeRankFive" text="Rank 5" GridPane.rowIndex="4" />
+            <Button fx:id="upgradeSixButton" mnemonicParsing="false" onAction="#upgradeRankSix" text="Rank 6" GridPane.rowIndex="5" />
+            <Label text="Money or Credit?" GridPane.rowIndex="6">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Button fx:id="upgradeMoneyButton" mnemonicParsing="false" onAction="#upgradeMoney" text="Money" translateX="-60.0" GridPane.rowIndex="7" />
+            <Button fx:id="upgradeCreditButton" mnemonicParsing="false" onAction="#upgradeCredit" text="Credit" translateX="60.0" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <Pane fx:id="winnerPane" layoutX="253.0" layoutY="130.0" prefHeight="291.0" prefWidth="708.0" visible="false">
+         <children>
+            <Label fx:id="winner" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="373.0" prefHeight="144.0" prefWidth="709.0" text="PLAYER WINS!" textAlignment="CENTER" translateY="-300.0" wrapText="true">
+               <font>
+                  <Font size="56.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CharacterCreationController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="1280.0" opacity="0.76" pickOnBounds="true">
+         <image>
+            <Image url="@ghost-town-3689_1280.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="280.0" layoutY="196.0" prefHeight="94.0" prefWidth="454.0" style="-fx-background-color: white;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="139.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="378.0" minWidth="10.0" prefWidth="287.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="171.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="72.0" prefWidth="121.0" text="How many players? (2-8)" translateX="9.0" wrapText="true">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="playerInputAmount" alignment="CENTER" maxWidth="200.0" minWidth="200.0" prefHeight="43.0" prefWidth="190.0" translateX="12.0" GridPane.columnIndex="1" />
+            <Button fx:id="playerAmountSubmit" minHeight="43.0" mnemonicParsing="false" onAction="#playerAmountButton" text="Submit" translateX="217.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="280.0" layoutY="290.0" prefHeight="281.0" prefWidth="454.0" style="-fx-background-color: white;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="101.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="384.0" minWidth="10.0" prefWidth="353.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="114.0" minHeight="10.0" prefHeight="114.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="72.0" prefWidth="121.0" text="Name" wrapText="true" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold Italic" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="playerNameField" alignment="CENTER" maxWidth="200.0" minWidth="260.0" prefHeight="43.0" prefWidth="190.0" translateX="14.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="playerNameAccept" minHeight="43.0" mnemonicParsing="false" onAction="#playerNameButton" text="Accept" translateX="282.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text fx:id="playerTurn" strokeType="OUTSIDE" strokeWidth="0.0" translateX="24.0" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="45.0" />
+               </font>
+            </Text>
+            <Label fx:id="currentPlayer" prefHeight="45.0" prefWidth="140.0" translateX="23.0" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Book Antiqua Bold" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="playerProfile" fitHeight="111.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+      <Separator layoutX="279.0" layoutY="276.0" prefHeight="28.0" prefWidth="639.0" />
+      <GridPane gridLinesVisible="true" layoutX="734.0" layoutY="196.0" prefHeight="376.0" prefWidth="184.0" style="-fx-background-color: white;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fx:id="player1" strokeType="OUTSIDE" strokeWidth="0.0" translateX="30.0" />
+            <Text fx:id="player2" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="30.0" GridPane.rowIndex="1" />
+            <Text fx:id="player3" layoutX="10.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="30.0" GridPane.rowIndex="2" />
+            <Text fx:id="player4" layoutX="10.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="30.0" GridPane.rowIndex="3" />
+            <Text fx:id="player5" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="30.0" GridPane.rowIndex="4" />
+            <Text fx:id="player6" layoutX="10.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="30.0" GridPane.rowIndex="5" />
+            <Text fx:id="player7" layoutX="10.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="30.0" GridPane.rowIndex="6" />
+            <Text fx:id="player8" layoutX="10.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="30.0" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
